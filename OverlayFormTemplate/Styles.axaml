@@ -1,0 +1,32 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!-- Default Text Color -->
+	<Style Selector="TextBlock">
+		<Setter Property="Foreground" Value="Black" />
+	</Style>
+
+	<!-- Button Style -->
+	<Style Selector="Button">
+		<Setter Property="Background" Value="White" />
+		<Setter Property="Foreground" Value="Black" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border Background="{TemplateBinding Background}">
+						<ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style Selector="TextBlock.FormField">
+		<Setter Property="Foreground" Value="{StaticResource Bym.Color.DefaultTextColor}" />
+		<Setter Property="FontSize" Value="12" />
+		<Setter Property="Margin" Value="0 15 0 2" />
+	</Style>
+	
+</Styles>
